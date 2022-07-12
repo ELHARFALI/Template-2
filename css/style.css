@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+:root {
+  --main--color: #c5dffa;
+  --green--color: #69c47f;
+  --purple--color: #c73afb;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: #fff;
@@ -27,7 +33,7 @@ body {
   position: relative;
   z-index: 2;
   display: flex;
-  min-height: 3.5rem;
+  min-height: 4rem;
   padding: 10px;
 }
 
@@ -40,25 +46,59 @@ body {
   font-size: 30px;
   margin-left: 50px;
   font-weight: bold;
+  color: var(--purple--color);
 }
 
 .header-area .links {
   list-style: none;
   width: 100%;
   text-align: right;
-  padding-left: 0;
+  padding-left: 25px;
   padding-right: 100px;
   font-size: 22px;
 }
 
 .header-area .links li {
   display: inline-block;
+  color: var(--main--color);
   margin-left: 25px;
-  cursor: pointer;
 }
 
-.header-area .links li:hover {
-  border-bottom: 2px solid #fff;
-  color: #c73afb;
+.header-area .links li a {
+  text-decoration: none;
+  color: var(--main--color);
+  transition: 0.3s ease;
+}
+
+.header-area .links li a:hover,
+.header-area .links li a.active {
+  color: var(--green--color);
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.introduction-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  color: var(--main--color);
+}
+
+.introduction-text h1 {
+  font-size: 50px;
+  margin: 0 0 15px;
+}
+
+.introduction-text h1 span {
+  color: var(--green--color);
+}
+
+.introduction-text p {
+  line-height: 1.5;
+  font-size: 28px;
+  margin: 0;
 }
 /* End Landing Page  */
